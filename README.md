@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-### Hello Microverse Folks
+### Microverse Portfolio
 
-> This project is part of the first module of Microverse, It only contains an html file with a css file.
+> A project belonging to the first Module of Microverse, A Portfolio template remake in HTML and CSS
 
 
 ## Built With
