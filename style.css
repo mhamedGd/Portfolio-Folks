@@ -33,18 +33,22 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background: #1c1a19;
   background-image: url("rsc/images/Illustration-header.png");
   background-repeat: no-repeat;
   background-size: 350px;
-  background-position: 51vw 50vh;
+  background-position: 48vw 40vh;
 }
 
 .headline-background-img {
   position: absolute;
   transform: translate(225px, 150px);
   z-index: 0;
+}
+
+.headline h1 {
+  margin-top: 120px;
 }
 
 .headline > * {
