@@ -1,0 +1,5 @@
+#To ignore all node_modules
+node_modules/
+
+#This file should be ignored
+/test.md
