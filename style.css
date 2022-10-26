@@ -29,63 +29,63 @@ body {
   font-family: var(--roboto);
 }
 
-.header {
-  height: 590px;
+.headline {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #1c1a19;
-  background-image: url("./rsc/images/Illustration-header.png");
+  background-image: url("rsc/images/Illustration-header.png");
   background-repeat: no-repeat;
   background-size: 350px;
-  background-position: 200px 200px;
+  background-position: 51vw 50vh;
 }
 
-.header-background-img {
+.headline-background-img {
   position: absolute;
   transform: translate(225px, 150px);
   z-index: 0;
 }
 
-.header > * {
+.headline > * {
   margin: 0 0 10px 20px;
   width: 300px;
   z-index: 1;
 }
 
-.header-headertext {
+.headline-headertext {
   color: var(--orange-color);
   font-size: 52px;
   font-family: var(--crete-round);
   font-weight: 400;
 }
 
-.header-secondarytext {
+.headline-secondarytext {
   color: white;
   font-size: 24px;
   font-family: var(--roboto);
 }
 
-.header-paragraphtext {
+.headline-paragraphtext {
   color: white;
   font-size: 16px;
   font-family: var(--roboto);
   font-weight: 400;
 }
 
-.header-icons {
+.headline-icons {
   list-style: none;
 }
 
-.header-icon.first {
+.headline-icon.first {
   margin-left: -45px;
 }
 
-.header-icon {
+.headline-icon {
   display: inline;
   margin-right: 5px;
 }
 
-.header-icon img {
+.headline-icon img {
   filter: brightness(0) invert();
 }
