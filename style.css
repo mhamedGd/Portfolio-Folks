@@ -1,0 +1,91 @@
+:root {
+  --orange-color: #ff6b00;
+  --crete-round: 'Crete Round', serif;
+  --roboto: "Roboto", sans-serif;
+  --debug-border: 1px solid red;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  background: #3c3a39;
+}
+
+.nav-bar > * {
+  color: white;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+}
+
+.nav-bar-logo {
+  font-family: var(--roboto);
+}
+
+.header {
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1c1a19;
+  background-image: url("./rsc/images/Illustration-header.png");
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-position: 200px 200px;
+}
+
+.header-background-img {
+  position: absolute;
+  transform: translate(225px, 150px);
+  z-index: 0;
+}
+
+.header > * {
+  margin: 0 0 10px 20px;
+  width: 300px;
+  z-index: 1;
+}
+
+.header-headertext {
+  color: var(--orange-color);
+  font-size: 52px;
+  font-family: var(--crete-round);
+  font-weight: 400;
+}
+
+.header-secondarytext {
+  color: white;
+  font-size: 24px;
+  font-family: var(--roboto);
+}
+
+.header-paragraphtext {
+  color: white;
+  font-size: 16px;
+  font-family: var(--roboto);
+  font-weight: 400;
+}
+
+.header-icons {
+  list-style: none;
+}
+
+.header-icon.first {
+  margin-left: -45px;
+}
+
+.header-icon {
+  display: inline;
+  margin-right: 5px;
+}
+
+.header-icon img {
+  filter: brightness(0) invert();
+}
