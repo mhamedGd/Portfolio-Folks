@@ -1,6 +1,7 @@
 :root {
   --orange-color: #ff6b00;
   --orange-color-click: #ff2a00;
+  --dark-background: #1c1a19;
   --grey-transparent: rgba(255, 255, 255, 0.24);
   --grey-neutral: #8993a4;
   --crete-round: 'Crete Round', serif;
@@ -10,6 +11,16 @@
 
 body {
   margin: 0;
+}
+
+.link-styler {
+  background: var(--orange-color);
+  padding: 12px 18px;
+  text-decoration: none;
+  color: white;
+  font-family: var(--roboto);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .nav-bar {
@@ -38,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #1c1a19;
+  background: var(--dark-background);
   background-image: url("rsc/images/Illustration-header.png");
   background-repeat: no-repeat;
   background-size: 350px;
@@ -61,7 +72,7 @@ body {
   z-index: 1;
 }
 
-.headline-headertext {
+.headertext {
   color: var(--orange-color);
   font-size: 52px;
   font-family: var(--crete-round);
@@ -74,11 +85,12 @@ body {
   font-family: var(--roboto);
 }
 
-.headline-paragraphtext {
+.paragraphtext {
   color: white;
   font-size: 16px;
   font-family: var(--roboto);
-  font-weight: 400;
+  font-weight: 200;
+  line-height: 24px;
 }
 
 .headline-icons {
@@ -198,6 +210,7 @@ body {
   font-family: var(--crete-round);
   font-weight: 400;
   font-size: 32px;
+  margin-top: -10px;
 }
 
 .project-card-template-info p {
@@ -205,12 +218,12 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: var(--roboto);
-  margin-top: -25px;
+  margin-top: -15px;
 }
 
 .project-card-template-technologies {
   list-style: none;
-  margin: 0 0 -10px 0;
+  margin: 0 0 -60px 0;
 }
 
 .first-technology {
@@ -228,7 +241,7 @@ body {
 
 .see-project-container-card-template {
   margin-top: -25px;
-  height: 48px;
+  height: 52px;
   display: flex;
   justify-content: center;
   justify-items: stretch;
@@ -240,8 +253,9 @@ body {
   border: none;
   background: var(--orange-color);
   color: white;
-  font-size: 17px;
   font-family: var(--roboto);
+  font-weight: 600;
+  font-size: 17px;
 }
 
 .see-project-card-template:hover {
@@ -250,4 +264,64 @@ body {
 
 .see-project-card-template:focus {
   background: var(--orange-color-click);
+}
+
+.about-me-section {
+  background: var(--dark-background);
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 0.8fr;
+  justify-content: center;
+  background-image: url("./rsc/images/illustration-about.png");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: 62vw 400px;
+}
+
+.about-me-section h1 {
+  padding-top: 120px;
+}
+
+.about-me-section p {
+  margin-top: -30px;
+}
+
+.about-me-section div {
+  margin-top: 20px;
+}
+
+.about-me-section hr {
+  margin-top: 230px;
+  width: 90vw;
+  border: none;
+  border-top: 2px solid white;
+}
+
+.technologies-about-me {
+  padding-top: 100px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 0.8fr;
+}
+
+.technologies-about-me ul {
+  text-align: center;
+  list-style: none;
+  color: white;
+  margin-left: -10%;
+  font-family: var(--roboto);
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+.first-technology-about-me {
+  margin-left: -18%;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 80px;
+}
+
+.first-technology-about-me img {
+  padding: 0 12px;
 }
