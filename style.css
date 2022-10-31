@@ -222,16 +222,12 @@ body {
 }
 
 .project-card-template-technologies {
-  list-style: none;
+  display: block;
   margin: 0 0 -60px 0;
 }
 
-.first-technology {
-  margin-left: -40px;
-}
-
 .card-technology {
-  display: inline;
+  float: left;
   margin-right: 5px;
   color: white;
   font-family: var(--roboto);
