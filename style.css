@@ -23,6 +23,14 @@ body {
   font-size: 16px;
 }
 
+.icon {
+  filter: brightness(0) invert();
+}
+
+.icon-dark {
+  filter: brightness(0.8) invert();
+}
+
 .nav-bar {
   position: fixed;
   display: flex;
@@ -104,10 +112,6 @@ body {
 .headline-icon {
   display: inline;
   margin-right: 5px;
-}
-
-.headline-icon img {
-  filter: brightness(0) invert();
 }
 
 .section-label {
@@ -332,4 +336,59 @@ body {
 
 .first-technology-about-me img {
   padding: 0 12px;
+}
+
+.footer h2 {
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 32px;
+  width: 327px;
+  text-align: center;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 0.8fr;
+  justify-content: center;
+  row-gap: 15px;
+  padding: 80px 0 100px 0;
+}
+
+.contact-form-text {
+  border: none;
+  height: 32px;
+}
+
+.contact-form textarea {
+  height: 90px;
+  border: none;
+  background: #fbf8f7;
+}
+
+.submit-container {
+  display: grid;
+  justify-content: center;
+}
+
+.submit-container input {
+  border: none;
+}
+
+.footer-links {
+  border-top: 1px solid var(--grey-neutral);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons {
+  list-style: none;
+}
+
+.footer-icon-first-item {
+  margin-left: -10%;
+}
+
+.footer-icon {
+  display: inline;
+  padding: 0 5px 0 5px;
 }
