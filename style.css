@@ -1,11 +1,12 @@
 :root {
   --orange-color: #ff6b00;
-  --orange-color-click: #ff2a00;
+  --orange-color-click: #fff5e1;
   --dark-background: #1c1a19;
   --grey-transparent: rgba(255, 255, 255, 0.24);
   --grey-neutral: #8993a4;
   --crete-round: 'Crete Round', serif;
   --roboto: "Roboto", sans-serif;
+  --inter: "Inter", serif;
   --debug-border: 1px solid red;
 }
 
@@ -21,6 +22,28 @@ body {
   font-family: var(--roboto);
   font-weight: 600;
   font-size: 16px;
+}
+
+.link-styler:hover {
+  background: var(--orange-color-click);
+  border: 2px solid var(--orange-color);
+  color: var(--orange-color);
+  padding: 10px 16px;
+}
+
+.link-styler:focus {
+  background: var(--orange-color);
+  padding: 12px 18px;
+  color: white;
+  border: none;
+}
+
+.icon {
+  filter: brightness(0) invert();
+}
+
+.icon-dark {
+  filter: brightness(0.8) invert();
 }
 
 .nav-bar {
@@ -104,10 +127,6 @@ body {
 .headline-icon {
   display: inline;
   margin-right: 5px;
-}
-
-.headline-icon img {
-  filter: brightness(0) invert();
 }
 
 .section-label {
@@ -332,4 +351,67 @@ body {
 
 .first-technology-about-me img {
   padding: 0 12px;
+}
+
+.footer h2 {
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 32px;
+  width: 327px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  padding: 80px 0 100px 0;
+  font-family: var(--inter);
+}
+
+.contact-form-text {
+  height: 32px;
+  width: 300px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  border-bottom: 1px solid var(--grey-neutral);
+  font-family: var(--inter);
+}
+
+.contact-form textarea {
+  height: 90px;
+  width: 300px;
+  padding: 10px 10px 5px 10px;
+  border: none;
+  background: #fbf8f7;
+  font-family: var(--inter);
+}
+
+.submit-container {
+  display: grid;
+  justify-content: center;
+}
+
+.submit-container input {
+  border: none;
+}
+
+.footer-links {
+  border-top: 1px solid var(--grey-neutral);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons {
+  list-style: none;
+}
+
+.footer-icon-first-item {
+  margin-left: -10%;
+}
+
+.footer-icon {
+  display: inline;
+  padding: 0 5px 0 5px;
 }
