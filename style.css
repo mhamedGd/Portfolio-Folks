@@ -406,6 +406,12 @@ body {
   font-family: var(--inter);
 }
 
+.inputs-contact-form {
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+}
+
 .contact-form-text {
   height: 32px;
   width: 300px;
@@ -487,7 +493,7 @@ body {
   .headline {
     height: 100vh;
     background-size: 525px;
-    background-position: 64vw 0;
+    background-position: 100% 0;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
@@ -529,7 +535,7 @@ body {
   }
 
   .works-section {
-    grid-template-columns: repeat(3, 0.225fr);
+    grid-template-columns: repeat(3, 350px);
     row-gap: 80px;
   }
 
@@ -600,5 +606,62 @@ body {
   .project-card-template-technologies {
     list-style: none;
     margin: 0 0 -200px 0;
+  }
+
+  .about-me-section {
+    background: var(--dark-background);
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    background-image: url("./rsc/images/illustration-about.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: 100% 200px;
+  }
+
+  .about-me-text {
+    display: grid;
+    grid-template-columns: 0.3fr;
+  }
+
+  .about-me-text p {
+    width: 560px;
+  }
+
+  .about-me-text hr {
+    justify-self: center;
+    width: 75vw;
+  }
+
+  .parent-list-about-me {
+    display: grid;
+    justify-content: center;
+    column-gap: 75px;
+    grid-template-columns: repeat(3, 300px);
+  }
+
+  .contact-form {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contact-form h2 {
+    text-align: left;
+    flex-basis: 350px;
+  }
+
+  .inputs-contact-form {
+    justify-content: start;
+  }
+
+  .inputs-contact-form > input,
+  .inputs-contact-form > textarea {
+    padding-right: 200px;
+  }
+
+  .submit-container {
+    justify-content: left;
   }
 }
