@@ -11,7 +11,15 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
+  box-sizing: content-box;
+}
+
+.center-image {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .link-styler {
@@ -29,6 +37,8 @@ body {
   border: 2px solid var(--orange-color);
   color: var(--orange-color);
   padding: 10px 16px;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 .link-styler:focus {
@@ -47,6 +57,7 @@ body {
 }
 
 .nav-bar {
+  font-family: var(--roboto);
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -59,12 +70,21 @@ body {
 
 .nav-bar > * {
   color: white;
-  padding: 0 10px 0 10px;
+  padding: 0 20px 0 20px;
   text-decoration: none;
 }
 
 .nav-bar-logo {
-  font-family: var(--roboto);
+  font-weight: 700;
+}
+
+.nav-bar-burger {
+  background: none;
+  border: none;
+}
+
+.nav-bar-desktop-menu {
+  display: none;
 }
 
 .headline {
@@ -79,17 +99,23 @@ body {
   background-position: 48vw 250px;
 }
 
+.headline-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .headline-background-img {
   position: absolute;
   transform: translate(225px, 150px);
   z-index: 0;
 }
 
-.headline h1 {
+.headline-info h1 {
   margin-top: 120px;
 }
 
-.headline > * {
+.headline-info > * {
   margin: 0 0 10px 20px;
   width: 300px;
   z-index: 1;
@@ -121,7 +147,7 @@ body {
 }
 
 .headline-icon.first {
-  margin-left: -45px;
+  margin-left: -25px;
 }
 
 .headline-icon {
@@ -145,6 +171,7 @@ body {
 
 .section-label hr {
   width: 100%;
+  height: 2px;
   border: none;
   border-top: 2px solid black;
 }
@@ -210,9 +237,18 @@ body {
 
 .project-card-template {
   height: 386px;
+  width: 327px;
   background-image: url("./rsc/images/Img-Placeholder_03.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.project-card-template-hover {
+  background: none;
+  border: none;
+  height: inherit;
+  width: inherit;
+  position: absolute;
 }
 
 .project-card-template-info {
@@ -370,6 +406,12 @@ body {
   font-family: var(--inter);
 }
 
+.inputs-contact-form {
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+}
+
 .contact-form-text {
   height: 32px;
   width: 300px;
@@ -414,4 +456,212 @@ body {
 .footer-icon {
   display: inline;
   padding: 0 5px 0 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-bar {
+    height: 60px;
+  }
+
+  .nav-bar > * {
+    color: white;
+    padding: 0 0 0 40px;
+    text-decoration: none;
+  }
+
+  .nav-bar-burger {
+    display: none;
+  }
+
+  .nav-bar-desktop-menu {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .nav-bar-desktop-menu-first {
+    margin-left: -15%;
+  }
+
+  .nav-bar-menu-item {
+    display: inline;
+  }
+
+  .headline {
+    height: 100vh;
+    background-size: 525px;
+    background-position: 100% 0;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .headline > * {
+    margin-top: -72px;
+  }
+
+  .headertext {
+    font-size: 72px;
+    font-weight: 400;
+  }
+
+  .headline-secondarytext {
+    font-size: 32px;
+  }
+
+  .paragraphtext {
+    font-size: 20px;
+    line-height: 32px;
+    font-family: var(--inter);
+  }
+
+  .headline-icon.first {
+    margin: 100px 0 0 0;
+  }
+
+  .headline-info > * {
+    margin: 0 0 10px 20px;
+    width: 560px;
+    z-index: 1;
+  }
+
+  .headline-icon {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+
+  .works-section {
+    grid-template-columns: repeat(3, 350px);
+    row-gap: 80px;
+  }
+
+  .section-label {
+    grid-column: 1/4;
+    grid-template-columns: 0.25fr 0.75fr;
+    align-items: center;
+  }
+
+  .main-project {
+    grid-column: 1/4;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .main-project-image {
+    flex: 1.5;
+  }
+
+  .main-project-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .main-project-info-container h2 {
+    margin-top: -10px;
+    font-size: 40px;
+  }
+
+  .main-project-info-container p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .main-project ul {
+    margin-top: -10px;
+  }
+
+  .main-project button {
+    padding: 12px 14px;
+  }
+
+  .project-card-template {
+    height: 435px;
+  }
+
+  .project-card-template-hover:hover {
+    cursor: pointer;
+    border: 4px solid var(--dark-background);
+  }
+
+  .project-card-template-hover:hover + .project-card-template-info {
+    display: none;
+  }
+
+  .see-project-container-card-template {
+    display: none;
+  }
+
+  .project-card-template-hover:hover + .project-card-template-info + .see-project-container-card-template {
+    margin-top: 380px;
+    display: block;
+  }
+
+  .project-card-template-technologies {
+    list-style: none;
+    margin: 0 0 -200px 0;
+  }
+
+  .about-me-section {
+    background: var(--dark-background);
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    background-image: url("./rsc/images/illustration-about.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: 100% 200px;
+  }
+
+  .about-me-text {
+    display: grid;
+    grid-template-columns: 0.3fr;
+  }
+
+  .about-me-text p {
+    width: 560px;
+  }
+
+  .about-me-text hr {
+    justify-self: center;
+    width: 75vw;
+  }
+
+  .parent-list-about-me {
+    display: grid;
+    justify-content: center;
+    column-gap: 75px;
+    grid-template-columns: repeat(3, 300px);
+  }
+
+  .contact-form {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contact-form h2 {
+    text-align: left;
+    flex-basis: 350px;
+  }
+
+  .inputs-contact-form {
+    justify-content: start;
+  }
+
+  .inputs-contact-form > input,
+  .inputs-contact-form > textarea {
+    padding-right: 200px;
+  }
+
+  .submit-container {
+    justify-content: left;
+  }
 }
