@@ -11,3 +11,11 @@ HAMBURGER_BUTTON.addEventListener('click', () => {
 });
 
 const MOBILE_MENU_LINKS = document.querySelectorAll(".mobile-menu-links");
+
+MOBILE_MENU_LINKS.forEach(element => {
+    element.addEventListener('click', () => {
+        HAMBURGER_BUTTON.classList.remove('active');
+    MOBILE_MENU_SCREEN.classList.remove("active");
+    NAVBAR_LOGO.classList.remove("active");
+    });
+});
