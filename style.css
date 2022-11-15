@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -108,12 +109,17 @@ body {
 }
 
 .mobile-menu-screen {
-  display: none;
+  visibility: none;
+  width: 0;
+  height: 0;
+  transform: translate(100vw, 0);
+  transition: 0.5s;
 }
 
 .mobile-menu-screen.active {
-  display: block;
+  visibility: visible;
   position: fixed;
+  transform: translate(0, 51vh);
   background: #3c3a39;
   width: 100vw;
   height: 100vh;
