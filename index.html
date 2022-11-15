@@ -8,20 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <script src="./index.js" defer></script>
     <title>Portfolio</title>
 </head>
 <body>
     <header>
       <nav class="nav-bar">
           <a href="" class="nav-bar-logo">Mohammed</a>
-          <button href="#" class="nav-bar-burger"><img src="rsc/icons/Icon-Menu.svg" alt=""></button>
+          <button class="nav-bar-burger">
+            <img class="nav-bar-burger-icon" src="rsc/icons/Icon-Menu.svg" alt="">
+            <img class="nav-bar-burger-cancel" src="rsc/icons/Icon-Cancel.svg" alt="">
+          </button>
           <ul class="nav-bar-desktop-menu">
             <li class="nav-bar-menu-item nav-bar-desktop-menu-first">Portfolio</li>
             <li class="nav-bar-menu-item">About</li>
             <li class="nav-bar-menu-item">Content</li>
             <li class="nav-bar-menu-item"><div class="center-image"><img src="./rsc/icons/Icon-Mail.svg" alt="Navigation bar mail icon"></div></li>
           </ul>
-      </nav>
+        </nav>
+        <div class="mobile-menu-screen">
+          <ul class="mobile-menu-screen-list">
+            <li><a class="mobile-menu-links" href="#portfolio">Portfolio</a></li>
+            <li><a class="mobile-menu-links" href="#about">About</a></li>
+            <li><a class="mobile-menu-links" href="#contact">Contact</a></li>
+          </ul>
+        </div>
     </header>
     <section class="headline">
       <div class="headline-info">
@@ -52,7 +63,7 @@
             <img class="icon" src="rsc/icons/Icon-Medium.svg" alt="Portfolio Medium Page"></a></li>
       </ul>
     </section>
-    <section class="works-section">
+    <section id="portfolio" class="works-section">
       <div class="section-label">
         <h1>My Recent Works</h1>
         <hr class="center-image">
@@ -177,7 +188,7 @@
         </div> 
       </div>    
     </section>
-    <section class="about-me-section">
+    <section id="about" class="about-me-section">
       <div class="about-me-text">
         <h1 class="headertext">About me</h1>
         <p class="paragraphtext">
@@ -229,7 +240,7 @@
         </ul>
       </div>
     </section>
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <form class="contact-form" action="https://formspree.io/f/mpznwqjl" method="post">       
           <h2>
             I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
