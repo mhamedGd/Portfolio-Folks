@@ -29,6 +29,7 @@ body {
 
 .link-styler {
   background: var(--orange-color);
+  border: none;
   padding: 12px 18px;
   text-decoration: none;
   color: white;
@@ -239,6 +240,97 @@ body {
   height: 2px;
   border: none;
   border-top: 2px solid black;
+}
+
+.project-details-popup-container {
+  display: none;
+}
+
+.project-details-popup-container.active {
+  position: fixed;
+  width: 100vw;
+  height: 110vh;
+  transform: translate(-5vw, 47vh);
+  background: rgba(0, 0, 0, 0.4);
+  color: black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-details-popup-window {
+  background: white;
+  width: 343px;
+  height: 718px;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: 0.8fr;
+  font-family: var(--roboto);
+}
+
+.project-details-popup-window-cancel {
+  position: absolute;
+  transform: translate(300px, 20px);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.project-details-popup-header {
+  height: 80px;
+}
+
+.project-details-popup-header h2 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.project-details-list {
+  padding: 25px 0 0 0;
+  margin-top: 40px;
+}
+
+.project-details-technologies {
+  display: inline;
+  padding: 8px 10px;
+  border: 1px solid black;
+  margin: 0 5px 0 0;
+}
+
+.project-details-popup-info {
+  margin-top: 50px;
+}
+
+.project-details-popup-info img {
+  width: 311px;
+}
+
+.project-details-popup-paracontainer p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.project-details-popup-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-details-popup-buttons-container button {
+  padding-right: 36px;
+  padding-left: 36px;
+  height: 48px;
+}
+
+.project-details-popup-buttons-container div {
+  display: inline;
+  height: 0;
+  width: 0;
+}
+
+.project-details-popup-buttons-container div > img {
+  width: 24px;
 }
 
 .works-section {
