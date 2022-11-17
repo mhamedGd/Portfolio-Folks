@@ -403,7 +403,7 @@ body {
 }
 
 .project-card-template-info h2 {
-  width: 240px;
+  width: 300px;
   color: white;
   font-family: var(--crete-round);
   font-weight: 400;

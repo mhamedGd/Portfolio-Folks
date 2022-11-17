@@ -20,7 +20,26 @@ MOBILE_MENU_LINKS.forEach(element => {
     });
 });
 
-const ViewHideProject = () => {
+const ViewHideProject = (project_info) => {
+    const DETAILS_HEADER = document.querySelector('.project-details-popup-header h2');
+    DETAILS_HEADER.textContent = project_info.header;
+
+    const DETAILS_LIST = document.querySelector('.project-details-list');
+
+    document.querySelectorAll('.project-details-technologies').forEach(element =>{
+        element.remove();
+    });
+
+    project_info.technologies.forEach(element => {
+        const DETAILS_LIST_ITEM = document.createElement('li');
+        DETAILS_LIST_ITEM.classList.add('project-details-technologies');
+        DETAILS_LIST_ITEM.textContent = element;
+        DETAILS_LIST.appendChild(DETAILS_LIST_ITEM);
+    });
+
+    document.querySelector('.project-details-popup-info img').setAttribute('src', project_info.img_src);
+    document.querySelector('.project-details-popup-paracontainer p').textContent = project_info.paragraph;
+
     const DETAILS_POPUP = document.querySelector('.project-details-popup-container');
     DETAILS_POPUP.classList.toggle('active');
 };
@@ -29,32 +48,38 @@ const PROJECTS_INFO = [
     {
         header: "Profesional Art Printing Data",
         paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
+        technologies: ['html', 'css', 'javascript'],
+        img_src: "./rsc/images/Snapshoot-Portfolio-Desktop.png"
+    },
+    {
+        header: "PEEP BOOP",
+        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+        technologies: ['html', 'css', 'javascript'],
+        img_src: "./rsc/images/Snapshoot-Portfolio-Desktop.png"
+    },
+    {
+        header: "BOB OUR AWESOME LEADER",
+        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+        technologies: ['html', 'css', 'javascript'],
+        img_src: "./rsc/images/Img-Placeholder.png"
     },
     {
         header: "Profesional Art Printing Data",
         paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
+        technologies: ['html', 'css', 'javascript'],
+        img_src: "./rsc/images/Snapshoot-Portfolio-Desktop.png"
+    },
+    {
+        header: "Moon Ambassador",
+        paragraph: "We must create better relations with the EARTHLINGS",
+        technologies: ['moon html', 'space css', 'orbit'],
+        img_src: "./rsc/images/Img-Placeholder.png"
     },
     {
         header: "Profesional Art Printing Data",
         paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
-    },
-    {
-        header: "Profesional Art Printing Data",
-        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
-    },
-    {
-        header: "Profesional Art Printing Data",
-        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
-    },
-    {
-        header: "Profesional Art Printing Data",
-        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-        technologies: ['html', 'css', 'javascript']
+        technologies: ['html', 'css', 'javascript'],
+        img_src: "./rsc/images/Snapshoot-Portfolio-Desktop.png"
     }
 ];
 
@@ -84,7 +109,10 @@ function CreateProjectCard(project_info) {
 
     const PROJECT_BUTTON = document.createElement('button');
     PROJECT_BUTTON.classList.add('project-card-template-hover');
-    PROJECT_BUTTON.addEventListener('click', ViewHideProject);
+    PROJECT_BUTTON.addEventListener('click', function (){
+        ViewHideProject(project_info);
+    });
+
     PROJECT_CARD.appendChild(PROJECT_BUTTON);
 
     const PROJECT_INFO_DIV = document.createElement('div');
@@ -118,13 +146,20 @@ function CreateProjectCard(project_info) {
     const SEE_PROJECT_BUTTON = document.createElement('button');
     SEE_PROJECT_BUTTON.classList.add('see-project-card-template');
     SEE_PROJECT_BUTTON.textContent = 'See Project';
-    SEE_PROJECT_BUTTON.addEventListener('click', ViewHideProject);
+    SEE_PROJECT_BUTTON.addEventListener('click', function (){
+        ViewHideProject(project_info);
+    });
     SEE_PROJECT_DIV.appendChild(SEE_PROJECT_BUTTON);
 }
 
 for(let i = 0; i < PROJECTS_INFO.length; i++){
-
-    CreateProjectCard(PROJECTS_INFO[0]);
+    CreateProjectCard(PROJECTS_INFO[i]);
 }
     
-document.querySelector('.project-details-popup-window-cancel').addEventListener('click', ViewHideProject);
+document.querySelector('.project-details-popup-window-cancel').addEventListener('click', function (){
+    ViewHideProject(PROJECTS_INFO[0]);
+});
+
+document.querySelector('.main-project-button-container button').addEventListener('click', function (){
+    ViewHideProject(PROJECTS_INFO[0]);
+});
