@@ -69,6 +69,7 @@ function CreateProjectCard(project_info) {
 
     const PROJECT_BUTTON = document.createElement('button');
     PROJECT_BUTTON.classList.add('project-card-template-hover');
+    PROJECT_BUTTON.addEventListener('click', ViewHideProject);
     PROJECT_CARD.appendChild(PROJECT_BUTTON);
 
     const PROJECT_INFO_DIV = document.createElement('div');
@@ -107,7 +108,8 @@ function CreateProjectCard(project_info) {
 }
 
 for(let i = 0; i < PROJECTS_INFO.length; i++){
-    CreateProjectCard(PROJECTS_INFO[i]);
+
+    CreateProjectCard(PROJECTS_INFO[0]);
 }
     
 document.querySelector('.project-details-popup-window-cancel').addEventListener('click', ViewHideProject);
