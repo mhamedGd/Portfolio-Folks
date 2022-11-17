@@ -776,6 +776,7 @@ body {
   }
 
   .project-card-template-hover:hover {
+    transition: 0.25s;
     cursor: pointer;
     border: 4px solid var(--dark-background);
   }

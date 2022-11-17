@@ -40,6 +40,21 @@ const PROJECTS_INFO = [
         header: "Profesional Art Printing Data",
         paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
         technologies: ['html', 'css', 'javascript']
+    },
+    {
+        header: "Profesional Art Printing Data",
+        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+        technologies: ['html', 'css', 'javascript']
+    },
+    {
+        header: "Profesional Art Printing Data",
+        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+        technologies: ['html', 'css', 'javascript']
+    },
+    {
+        header: "Profesional Art Printing Data",
+        paragraph: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+        technologies: ['html', 'css', 'javascript']
     }
 ];
 
