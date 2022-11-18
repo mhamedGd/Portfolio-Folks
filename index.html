@@ -170,11 +170,12 @@
           </h2>
           <div class="inputs-contact-form">
             <input class="contact-form-text" name="Fullname" type="text" maxlength="30" placeholder="Full name" required>
-            <input class="contact-form-text" name="Email" type="email" placeholder="Email" required>
+            <input id="contact-form-email" class="contact-form-text" name="Email" type="email" placeholder="Email" required>
             <textarea name="Comment" id="" cols="15" rows="10" maxlength="500" placeholder="Place Text Here" required></textarea>
             <div class="submit-container">
-              <input class="link-styler" type="submit" name="Get in touch" id="" value="Get in touch">
+              <input id="contact-form-button" class="link-styler" type="submit" name="Get in touch" value="Get in touch">
             </div>
+            <label class="contact-form-invalid-email">* email should not contain upper-case letters</label>
           </div>
       </form>
       <div class="footer-links">

@@ -55,6 +55,15 @@ body {
   filter: brightness(0.8) invert();
 }
 
+.contact-form-text.invalid {
+  border-bottom: 2px solid red;
+}
+
+.contact-form-invalid-email.invalid {
+  display: block;
+  color: red;
+}
+
 .nav-bar {
   font-family: var(--roboto);
   position: fixed;
@@ -580,6 +589,10 @@ body {
 
 .submit-container input {
   border: none;
+}
+
+.contact-form-invalid-email {
+  display: none;
 }
 
 .footer-links {
